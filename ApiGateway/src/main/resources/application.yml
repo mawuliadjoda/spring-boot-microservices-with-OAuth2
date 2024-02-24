@@ -13,3 +13,19 @@ spring:
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
+
+        - id: albums
+          uri: http://localhost:8091
+          predicates:
+            - Path=/api/v1/albums
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+
+        - id: photos
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/photos
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
