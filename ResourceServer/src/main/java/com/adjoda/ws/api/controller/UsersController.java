@@ -21,8 +21,8 @@ public class UsersController {
     }
 
     @GetMapping("/status/check")
-    public String status() {
-        return "working on port: " + env.getProperty("local.server.port");
+    public Response status() {
+        return  new Response("working on port: " + env.getProperty("local.server.port"));
     }
 
     // @PreAuthorize("hasAuthority('ROLE_developer')")
@@ -40,4 +40,6 @@ public class UsersController {
         // return "Deleted user with id " + id + " and JWT subject " + jwt.getSubject();
         return new UserRest("Mawuli", "ADJODA", "7c22923f-c5c1-4af5-80a7-8e94438c079d");
     }
+
+    record Response(String message){}
 }
