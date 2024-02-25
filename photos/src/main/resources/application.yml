@@ -2,7 +2,15 @@
 server:
   port: 8090
 
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8010/eureka"
+
 spring:
+  application:
+    name: photos-resource-server
   security:
     oauth2:
       resourceserver:

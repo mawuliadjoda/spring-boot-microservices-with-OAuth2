@@ -1,7 +1,21 @@
 server:
-  port: 8081
+  port: 0 # will run on random port
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8010/eureka"
+
+  instance:
+    instance-id: ${spring.application.name}:${instanceId:${random.value}}
+    hostname: localhost   # useful to overcome java.net.UnknownHostException: Failed to resolve  [A(1), AAAA(28)]
+
 
 spring:
+  application:
+    name: demo-resource-server
   security:
     oauth2:
       resourceserver:

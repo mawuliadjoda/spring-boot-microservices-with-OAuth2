@@ -1,7 +1,15 @@
 server:
   port: 8091
 
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8010/eureka"
+
 spring:
+  application:
+    name: album-resource-server
   security:
     oauth2:
       resourceserver:

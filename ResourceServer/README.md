@@ -47,3 +47,7 @@ with this Keycloak.
 5. How to acquire an Access Token
    For a client application to acquire access token from an identity provider server, it will
    need to perform one of OAuth authorization flows, and during these steps user will need to authenticate.
+   6. Run application and pass instanceId as command line argument
+
+
+         mvn spring-boot:run "-Dspring-boot.run.arguments=--instanceId=adjoda"
