@@ -1,4 +1,4 @@
-package com.adjoda.ws.api.ApiGateway;
+package com.adjoda.ws.api.ApiGateway.cors.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
